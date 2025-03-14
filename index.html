@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="How To" class="hidden" class="pop-up">
+        <h1><b>How To Play</b></h1>
+        <div id="title">
+            <span class="title-letter">W</span>
+            <span class="title-letter">O</span>
+            <span class="title-letter">R</span>
+            <span class="title-letter">D</span>
+            <span class="title-letter">L</span>
+            <span class="title-letter">E</span>
+        </div>
+        <ul>Guess the word in 6 tries.</ul>
+        <ul>Each guess must be a valid 5-letter word.</ul>
+        <p><b>Color Meaning</b></p>
+        <li><b style="color: green;">Green:</b> The letter is in the correct spot</li>
+        <li><b style="color: yellow;">Yellow:</b> The letter is in the word, but not correct spot</li>
+        <li><b style="color: #787c7e;">Gray:</b> The letter isn't in the word</li>
+        <br>
+        <button onclick="closeModal()" id="modal-close">Continue to Game</button>
+    </div>
+
+    <div id="informations">
+        <p>Score: <span id="score"></span></p>
+        <p>Lives: <span id="lives"></span></p>
+        <p>Number of Enemies: <span id="enemy"></span></p>
+        <p>Number of Dots: <span id="dot"></span></p>
+        <p>Enemy Speed: <span id="speed"></span></p>
+    </div>
+
+
+    <div id="game-container">
+        <div id="character"></div>
+    </div>
+
+    <script src="brains.js"></script> <!-- Link to the JavaScript file -->
+</body>
+
+
+</html>
