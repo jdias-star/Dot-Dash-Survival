@@ -112,7 +112,7 @@ body {
     font-family: "Bahiana", sans-serif;
     margin: 10px 0;
     padding: 5%;
-    font-size: 30px;
+    font-size: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -121,6 +121,24 @@ h1{
     text-align: center;
     font-family: "Fontdiner Swanky", serif;
 }
+
+#console, #letter{
+    text-align: center;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -24px;
+}
+
+#console{
+    color: #ff0000;
+}
+#letter{
+    color: #ff9900;
+}
+
+
 
 #informations p:last-child {
     border-bottom: none;

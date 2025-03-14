@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mouse.style.left = `${Math.max(0, Math.min(boxRect.width - 20, x))}px`;
         mouse.style.top = `${Math.max(0, Math.min(boxRect.height - 20, y))}px`;
     
+        
         dots.forEach(dot => {
             if (areElementsTouching(mouse, dot)) {
                 updateDots()
@@ -203,11 +204,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     numEnemies++;
                     console.log(numEnemies)
                     updateEnemies();
+
+
+                    let letterUpdate = document.getElementById('letter')
+                    letterUpdate.innerHTML = "A"
+                    let consoleUpdate = document.getElementById('console')
+                    consoleUpdate.innerHTML = `+1 Speed, +1 Score, +1 Enemy`
                 }
                 
                 else if(counts["B"] == 1){
                     score++;
                     moveSpeed++
+
+                    let letterUpdate = document.getElementById('letter')
+                    letterUpdate.innerHTML = "B"
+                    let consoleUpdate = document.getElementById('console')
+                    consoleUpdate.innerHTML = `+1 Speed, +1 Score`
                 }
                 
                 else if(counts["C"] == 1){
@@ -215,7 +227,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log(numEnemies)
                     if(numEnemies > 1){
                         decreaseEnemies(1);
+                        let consoleUpdate = document.getElementById('console')
+                        consoleUpdate.innerHTML = `+1 Speed, -1 Enemy`
+                    }else{
+                        let consoleUpdate = document.getElementById('console')
+                    consoleUpdate.innerHTML = `+1 Speed`
                     }
+
+                    let letterUpdate = document.getElementById('letter')
+                    letterUpdate.innerHTML = "C"
                 }
                 
                 else if(counts["D"] == 1){
