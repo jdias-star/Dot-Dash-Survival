@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Dash Survival</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Fontdiner+Swanky&family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video id="mediaPlayer" class="hidden" autoplay controls></video>
+    <video id="pickup" class="hidden" autoplay controls>
+        <source src="pop.mp4">
+    </video>
+
+<script src="brains.js"></script>
+</body>
+
+    <div id="modal"  class="pop-up">
+        <h1><b>How To Play</b></h1>
+        <p>CONTROL YOUR CHARACTER USING THE MOUSE</p>
+        <p></p>MOVE SWIFTLY TO DODGE ENEMIES AND COLLECT POINTS</p>
+        <p>PICK UP THE GLOWING DOTS SCATTERED AROUND THE ARENA</p>
+        <p>TOUCHING AN ENEMY WILL END YOUR RUN</p>
+        <p>THE LONGER YOU SURVIVE, THE HIGHER YOUR SCORE</p>
+        <button
+        
+          id="modal-close">Start Game</button>
+    </div>
+
+    <div id="modal-dead"  class="pop-up">
+        <h1><b>You Did Not Survival</b></h1>
+        <p>You managed to collect <span id="ripScore"></span> points in <span id="ripTime"></span> seconds!</p>
+        <!-- <button id="information">How To Play</button><br> -->
+        <button id="restart">Restart</button>
+    </div>
+
+    <!-- <div id="modal-howto"  class="pop-up">
+        <h1><b>How To Play</b></h1>
+        <p>CONTROL YOUR CHARACTER USING THE MOUSE</p>
+        <p></p>MOVE SWIFTLY TO DODGE ENEMIES AND COLLECT POINTS</p>
+        <p>PICK UP THE GLOWING DOTS SCATTERED AROUND THE ARENA</p>
+        <p>TOUCHING AN ENEMY WILL END YOUR RUN</p>
+        <p>THE LONGER YOU SURVIVE, THE HIGHER YOUR SCORE</p>
+        <button
+        
+          id="modal-close2">Start Game</button>
+    </div> -->
+
+
+    <div id="informations">
+        <h1>Dot Dash Survial</h1>
+        <p>Score: <span id="score" class="span"></span></p>
+        <p>Time: <span id="time" class="span"></span></p>
+        <p>Number of Enemies: <span id="enemy" class="span"></span></p>
+        <p>Number of Dots: <span id="dots" class="span"></span></p>
+        <p>Enemy Speed: <span id="speed" class="span"></span></p>
+    </div>
+
+
+    <div id="game-container">
+        <div id="character"></div>
+    </div>
+
+    <script src="brains.js"></script> <!-- Link to the JavaScript file -->
+</body>
+
+
+</html>

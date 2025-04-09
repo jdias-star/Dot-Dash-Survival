@@ -1,0 +1,193 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top left, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff, #ffadad, #ffd6a5);
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s linear infinite;
+    margin: 0;
+    overflow: hidden;
+    font-style: normal;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#game-container {
+    width: 900px;
+    height: 700px;
+    border: 4px solid #333; /* Darker border for better contrast */
+    border-radius: 15px; /* Smooth, rounded corners */
+    background: linear-gradient(135deg, #dfe9f3, #a1c4fd); /* Modern gradient */
+    position: relative;
+    overflow: hidden;
+    margin-right: 0;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Adds depth */
+    cursor: none;
+}
+
+
+#character, .dot, .enemy {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 50%;
+}
+
+#character {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #00ffff 20%, #008b8b 100%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+    transition: transform 0.1s ease-in-out;
+    z-index: 100;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    /* background: radial-gradient(circle, #ff4d4d 20%, #b30000 100%); */
+    border-radius: 50%;
+    position: absolute;
+    /* box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.8); */
+    z-index: 1;
+}
+
+/* Enemy Styling */
+.enemy {
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle, #333 30%, #000 100%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    animation: enemyAnimation 1s infinite alternate ease-in-out;
+    z-index: 2;
+}
+
+/* Enemy Movement Animation */
+@keyframes enemyAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+.hidden {
+    display: none;
+    z-index: 0;
+  }
+
+#informations {
+    position: relative;
+    left: -2%;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 70%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+#informations p {
+    font-family: "Bahiana", sans-serif;
+    margin: 10px 0;
+    padding: 5%;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1{
+    font-size: 900;
+    text-align: center;
+    font-family: "Fontdiner Swanky", serif;
+}
+
+#console, #letter{
+    text-align: center;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -24px;
+}
+
+#console{
+    color: #ff0000;
+}
+#letter{
+    color: #ff9900;
+}
+
+
+
+#informations p:last-child {
+    border-bottom: none;
+}
+
+#informations .span {
+    color: #FFD700; /* Gold color for values to make them stand out */
+    font-weight: bold;
+    float: right;
+}
+
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: 17%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    background-color: rgba(0, 0, 0, 0.8);  /* Darker background for contrast */
+    padding: 40px 60px;  /* Large padding */
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;  /* Larger text */
+    font-weight: bold;
+    text-align: center;
+    z-index: 9999;  /* Make sure alert is on top */
+    opacity: 1;
+    font-family: "Underdog", system-ui;
+    /* font-family: "Bahiana", sans-serif; */
+    letter-spacing: 2px;
+    /* visibility: hidden; */
+}
+
+.pop-up button{
+    font-family: "Fontdiner Swanky", serif;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 40px;
+    
+}
+
+.pop-up button:hover{
+    color: #FFD700;
+    
+}
+
+
+.pop-up h1{
+    font-size: 70px;
+    margin-bottom: 0;
+    color: white;
+}
+
+#modal-dead h1{
+    font-size: 50px;
+}
